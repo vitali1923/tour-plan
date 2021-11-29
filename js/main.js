@@ -17,7 +17,7 @@ const hotelSlider = new Swiper('.hotel-slider', {
     // Navigation arrows
     navigation: {
       nextEl: '.reviews-slider__button--next',
-      prevEl: '.hotel-slider__button--prev',
+      prevEl: '.reviews-slider__button--prev',
     },
     effect:'flip',
   });
