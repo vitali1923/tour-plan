@@ -949,6 +949,8 @@ img {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   margin-bottom: 23px;
+  resize: none;
+  height: 123px;
 }
 
 .footer__button {
@@ -1299,6 +1301,16 @@ img {
     grid-row: 7;
     -ms-grid-column: 1;
     grid-column: 1;
+  }
+  .footer__info {
+    -ms-grid-row: 8;
+    grid-row: 8;
+    grid-column: span 2;
+  }
+  .footer__button {
+    -ms-grid-row: 9;
+    grid-row: 9;
+    grid-column: span 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
