@@ -25,32 +25,33 @@ try {
     $mail->isSMTP();   
     $mail->CharSet = "UTF-8";
     $mail->SMTPAuth   = true;
-    $mail->SMTPDebug = 2;
+    // $mail->SMTPDebug = 2;
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
     $mail->Username   = 'ooomevir@gmail.com'; // Логин на почте
-    $mail->Password   = 'nX7BNgjrNVnh0H1iPhdc'; // Пароль на почте
+    $mail->Password   = 'XX8AeCxpOmfA6phqRgs0'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
     $mail->setFrom('ooomevir@gmail.com', 'Виталий Мельник'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress('vitalimelnik@yandex.ru');  
+    $mail->addAddress('vitalimelnik@yandex.ru');
 
     // Отправка сообщения
     $mail->isHTML(true);
     $mail->Subject = $title;
     $mail->Body = $body;    
 
-    // Проверяем отравленность сообщения
-    if ($mail->send()) {$result = "success";} 
-    else {$result = "error";}
-    } catch (Exception $e) {
-        $result = "error";
-        $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
-    }
+// Проверяем отравленность сообщения
+if ($mail->send()) {$result = "success";} 
+else {$result = "error";}
 
-    // Отображение результата
-    echo json_encode(["result" => $result, "resultfile" => $rfile, "status" => $status]);
+} catch (Exception $e) {
+    $result = "error";
+    $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
+}
+
+// Отображение результата
+header('Location: thankyou.html');

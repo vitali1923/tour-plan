@@ -63,7 +63,7 @@ $('.form').each(function(){
         required: "We need your email address to contact you",
         email: "Your email address must be in the format of name@domain.com",
       },
-      phone:{
+      phone: {
         required:"Телефон обязателен",
       },
     },
