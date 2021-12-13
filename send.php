@@ -29,12 +29,12 @@ try {
     $mail->Debugoutput = function($str, $level) {$GLOBALS['status'][] = $str;};
 
     // Настройки вашей почты
-    $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'vitali.melnik84@gmail.com'; // Логин на почте
-    $mail->Password   = 'qtRCcERLInxZRC4zUDBP'; // Пароль на почте
+    $mail->Host       = 'smtp.mail.ru'; // SMTP сервера вашей почты
+    $mail->Username   = 'hummel.sport@mail.ru'; // Логин на почте
+    $mail->Password   = 'XbLjUJvR1CmTmvdQuugw'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('vitali.melnik84@gmail.com', 'vitali.melnik84@gmail.com'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('hummel.sport@mail.ru', 'Vitali Melnik'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('vitalimelnik@yandex.ru');
@@ -52,6 +52,7 @@ else {$result = "error";}
     $result = "error";
     $status = "Сообщение не было отправлено. Причина ошибки: {$mail->ErrorInfo}";
 }
+
 
 // Отображение результата
 header('Location: thankyou.html');
