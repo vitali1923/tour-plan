@@ -18,6 +18,11 @@
         &__input
             &-group
                 flex-basis: 100%
+@media (min-width: 1200px)
+    .button:hover
+        background-color: $ligth
+        color: $primery
+        transition: opacity 0.6s, background 0.6s
 @media (max-width: 992px)
     .container,.newsletter-wrapper
         max-width: 700px
@@ -94,6 +99,12 @@
             &-form
                 grid-column: span 5
                 grid-row: 4
+        &__payment
+            grid-column: 1/7
+        &-political
+            &__ul
+                width: 100%
+                margin: 0
 @media (max-width: 768px)
     .container
         max-width: 576px
@@ -134,6 +145,10 @@
                 &--mobile
                     &_visible
                         display: block
+    .footer
+        &__payment
+            grid-row: 8
+            margin-top: 20px
     .menu
         &-button
             display: flex
@@ -216,6 +231,17 @@
         &__input
             &-group
                 flex-basis: 100%
+    .modal
+        &__dialog
+            max-width: 576px
+            width: 90%
+            height: 100%
+            padding: 5px 55px
+            overflow-y: auto
+        &__title
+            margin: 0
+        &__form
+            width: 100%
 @media (max-width: 576px)
     .container
         max-width: 576px
@@ -231,11 +257,14 @@
         padding: 76px 0 83px 0
         &__title
             margin-bottom: 37px
+        &-wrapper
+            max-width: 320px
+            width: 92%
     .swiper
         // max-width: 576px
         width: 100%
     .subscribe
-        width: 100%
+        min-width: 100%
     .activities
         width: 100%
     .card
@@ -248,8 +277,11 @@
             grid-column: 1
         &__social
             &-network
-                grid-row: 2
-                grid-column: 1
+                grid-row: 1
+                grid-column: 1/4
+        &__title
+            &--inline
+                margin: 0 43px 0 220px
         &__aditional
             grid-row: 3
             grid-column: 1
@@ -258,26 +290,124 @@
             grid-column: 1
         &__legal
             padding-left: 0
+            grid-row: 2px
+            grid-column: 1px
         &__contact
             &-details
-                grid-row: 6
+                grid-row: 5
                 grid-column: 1
             &-form
-                grid-row: 7
-                grid-column: 1
+                grid-row: 6
+                grid-column: 1/3
         &__info
             grid-row: 8
             grid-column: span 2
         &__button
             grid-row: 9
             grid-column: span 2
+        &__payment
+            grid-column: 1/4
+            grid-row: 7
+
 @media (max-width: 320px)
+    .container
+        max-width: 320px
+        width: 87%
+    .navbar
+        &-top
+            padding-top: 23px
+    .breadcrumb
+        &-list
+            padding: 12px 0
+    .hotel
+        padding-top: 6px
+        padding-bottom: 40px
+        &-right
+            min-height: 403px
+        &-info
+            padding-bottom: 41px
+        &-slider
+            height: 179px
+    .map
+        height: 173px
+    .newsletter
+        padding: 76px 0 64px 0
+        &-title
+            margin: 0
+            margin-left: 6px
+            font-style: normal
+            font-weight: 300
+            font-size: 20px
+            line-height: 25px
+            &__strong
+                margin-top: 4px
+                font-style: normal
+                font-weight: 600
+                font-size: 30px
+                line-height: 38px
+    .subscribe
+        min-width: 100%
+        margin-top: 38px
     .reviews
-        padding-bottom: 5px
+        padding-bottom: 79px
         &__title
-            font-size: 30px
-            margin-bottom: 35px
+            width: 245px
+            margin: 28px auto 43px
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 23px
+            text-align: center
+            text-transform: uppercase
+        &-slider
+            &__text
+                line-height: 140%
     .activities
         &__title
-            margin-bottom: 30px
-
+            margin-bottom: 37px
+            font-style: normal
+            font-weight: bold
+            font-size: 18px
+            line-height: 23px
+    .footer
+        &__logo
+            margin-top: -52px
+        &__social
+            &-network
+                flex-wrap: wrap
+                padding: 0
+                grid-row: 2
+                grid-column: 1
+        &__title
+            &--inline
+                margin: 0
+                padding-bottom: 10px
+        &__legal
+            grid-row: 3
+            grid-column: 1
+        &__aditional
+            grid-row: 4
+            grid-column: 1
+        &__categories
+            grid-row: 5
+            grid-column: 1
+        &__contact
+            &-details
+                grid-row: 6
+                grid-column: 1
+            &-form  
+                grid-row: 7
+                grid-column: 1
+        &__payment
+            margin-top: 0
+            grid-row: 8
+            &-wrapper
+                flex-wrap: wrap
+        &-political
+            &__ul
+                margin: 10px 0
+            &__item
+                margin-right: 10px
+    .navbar
+        &-button
+            top: 71px

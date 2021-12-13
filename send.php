@@ -30,11 +30,11 @@ try {
 
     // Настройки вашей почты
     $mail->Host       = 'smtp.gmail.com'; // SMTP сервера вашей почты
-    $mail->Username   = 'ooomevir@gmail.com'; // Логин на почте
-    $mail->Password   = 'XX8AeCxpOmfA6phqRgs0'; // Пароль на почте
+    $mail->Username   = 'vitali.melnik84@gmail.com'; // Логин на почте
+    $mail->Password   = 'qtRCcERLInxZRC4zUDBP'; // Пароль на почте
     $mail->SMTPSecure = 'ssl';
     $mail->Port       = 465;
-    $mail->setFrom('ooomevir@gmail.com', 'Виталий Мельник'); // Адрес самой почты и имя отправителя
+    $mail->setFrom('vitali.melnik84@gmail.com', 'vitali.melnik84@gmail.com'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
     $mail->addAddress('vitalimelnik@yandex.ru');
